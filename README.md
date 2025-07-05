@@ -20,6 +20,7 @@ SEO content and Google Business data
 ### 1. Clone the Repo
 git clone https://github.com/your-username/seo-dashboard.git
 cd seo-dashboard
+
 ###2. Backend Setup
 cd server
 npm install
