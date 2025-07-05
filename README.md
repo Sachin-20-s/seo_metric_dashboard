@@ -39,12 +39,11 @@ SEO content and Google Business data
 . Tailwind CSS for responsive design
 
 ## API Endpoints
--> POST /business-data
-  Request Body (json): { "name": "Cake & Co", "location": "Mumbai" }
-  Response (json):{ "rating": "4.4", "reviews": 138, "headline": "Why Cake & Co is Mumbai's Top Spot in 2025" }
--> GET /regenerate-headline
-  Query: /regenerate-headline?name=Cake%20&%20Co&location=Mumbai
-  Response (json):{ "headline": "Top 5 Reasons Mumbai Loves Cake & Co" }
+| Route                  | Method | Body / Query         | Returns                         |
+| ---------------------- | ------ | -------------------- | ------------------------------- |
+| `/business-data`       | POST   | `{ name, location }` | `{ rating, reviews, headline }` |
+| `/regenerate-headline` | GET    | `?name=&location=`   | `{ headline }`                  |
+
 
 ## Techstack
 | Frontend         | Backend           | State Management |
@@ -52,7 +51,6 @@ SEO content and Google Business data
 | React + Tailwind | Node.js + Express | Zustand          |
 
 ## Screenshots
-<img src="ttps://github.com/user-attachments/assets/bd84db30-82cc-47a0-9e05-58614e5b9016" width="350"/>
 Input form for business name and location:![image](https://github.com/user-attachments/assets/bd84db30-82cc-47a0-9e05-58614e5b9016)
 Simulated Google rating and review count:![image](https://github.com/user-attachments/assets/fe0fddf4-0cf0-4f45-8056-7d2d9423d8b9)
 Stimulated AI-generated SEO headline:![image](https://github.com/user-attachments/assets/d6b11d5f-3b95-4ae5-af18-bbb2f1056023)
