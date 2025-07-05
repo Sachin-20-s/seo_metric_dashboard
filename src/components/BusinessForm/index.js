@@ -21,7 +21,8 @@ function BusinessForm() {
 
     try {
       setLoading(true);
-      const res = await fetch('http://localhost:5000/business-data', {
+      const API = process.env.REACT_APP_API_BASE_URL || 'http://localhost:5000';
+      const res = await fetch(`${API}/business-data`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ name, location })
