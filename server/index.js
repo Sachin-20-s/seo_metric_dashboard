@@ -3,9 +3,23 @@ const cors=require('cors');
 const app=express();
 const PORT = process.env.PORT || 5000;
 
-const CLIENT_ORIGIN = process.env.CLIENT_ORIGIN || 'http://localhost:3000';
+const allowedOrigins = [
+  process.env.CLIENT_ORIGIN,            
+  'http://localhost:3000'               
+];
 
-app.use(cors({ origin: CLIENT_ORIGIN }));
+app.use(
+  cors({
+    origin: (origin, callback) => {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true); 
+      } else {
+        callback(new Error('Not allowed by CORS')); 
+      }
+    }
+  })
+);
+
 
 
 app.use(express.json());
