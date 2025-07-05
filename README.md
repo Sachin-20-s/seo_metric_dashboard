@@ -24,12 +24,12 @@ cd seo-dashboard
 cd server
 npm install
 node index.js
-# Runs on http://localhost:5000
+Runs on http://localhost:5000
 ### 3. Frontend Setup
 cd ..
 npm install
 npm start
-# Runs on http://localhost:3000
+Runs on http://localhost:3000
 
 ## Features
 . Input form for business name and location
