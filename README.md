@@ -1,5 +1,4 @@
-# TITLE
-SEO-MINI-DASHBOARD
+# TITLE : SEO-MINI-DASHBOARD
 A Mini Local Business Dashboard that simulates how small businesses might view their
 SEO content and Google Business data
 
