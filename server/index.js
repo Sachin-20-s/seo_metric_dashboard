@@ -4,7 +4,7 @@ const app=express();
 const PORT = process.env.PORT || 5000;
 
 const allowedOrigins = [
-  'https://seo-mini-dashboard.netlify.app',            
+   process.env.CLIENT_ORIGIN,             
   'http://localhost:3000' ,
 ];
 
