@@ -5,6 +5,8 @@ import RatingPieChart from '../RatingPieChart';
 import { Star } from 'lucide-react';
 import HeadlineCard from '../HeadlineCard';
 
+const API =
+  process.env.REACT_APP_API_BASE_URL || 'http://localhost:5000';
 
 function DisplayCard() {
   const { name, location, rating, reviews, headline, updateHeadline } = useBusinessStore();
@@ -14,7 +16,7 @@ function DisplayCard() {
     try {
       setLoading(true);
       const r = await fetch(
-        `http://localhost:5000/regenerate-headline?name=${encodeURIComponent(name)}&location=${encodeURIComponent(location)}`
+        `${API}/regenerate-headline?name=${encodeURIComponent(name)}&location=${encodeURIComponent(location)}`
       );
       if (!r.ok) throw new Error('Server error');
       const { headline } = await r.json();
