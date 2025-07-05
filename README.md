@@ -17,18 +17,19 @@ SEO content and Google Business data
 └── README.md 
 
 ## Setup Instructions
-1. Clone the Repo
-   git clone https://github.com/your-username/seo-dashboard.git
-   cd seo-dashboard
-2. Backend Setup
-   cd server
-   npm install
-   node index.js
-   Runs on: http://localhost:5000
-3. cd ..
-   npm install
-   npm start
-   Runs on: http://localhost:3000
+### 1. Clone the Repo
+git clone https://github.com/your-username/seo-dashboard.git
+cd seo-dashboard
+###2. Backend Setup
+cd server
+npm install
+node index.js
+# Runs on http://localhost:5000
+###3. Frontend Setup
+cd ..
+npm install
+npm start
+# Runs on http://localhost:3000
 
 ## Features
 . Input form for business name and location
