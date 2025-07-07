@@ -16,4 +16,5 @@ const useBusinessStore=create((set)=>({
     updateHeadline:(headline)=>set({headline}),
 }));
 
+
 export default useBusinessStore
